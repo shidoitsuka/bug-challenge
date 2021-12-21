@@ -26,7 +26,7 @@ const replace = (text, source_data = {}) => {
         new_text = new_text.replace(ftag.tag, ftag.resolver(source_data))
     })
 
-    return new_text
+    return new_text.replace(/"/g,'\\"')
 }
 
 module.exports = replace
